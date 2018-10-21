@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {robots} from '../App/API';
 import SearchBox from '../App/searchBox'
 import CardList from '../App/CardList';
-import { SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG } from 'constants';
+
 
 
 export class App extends Component {
@@ -27,7 +27,7 @@ export class App extends Component {
     return (
  
       <div className='tc'>
-          <h1 style={{tc:'center'}}>Realtime search app</h1>
+          <h1 style={{tc:'center', color:'white'}}>Search Robots</h1>
           <SearchBox searchChange={this.onSearchChange}/>
           <CardList robots={filterRobots}/>
         
