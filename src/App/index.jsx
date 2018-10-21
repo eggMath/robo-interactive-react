@@ -7,6 +7,9 @@ export class App extends Component {
       <div>
           <h1 style={{tc:'center'}}>Parent App</h1>
           <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
           
         
       </div>
