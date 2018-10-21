@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import Card from '../App/Card'
+import {robots} from '../App/API';
+import CardList from '../App/CardList';
 export class App extends Component {
  
   render() {
     return (
-      <div>
+
+      <div className='container'>
           <h1 style={{tc:'center'}}>Parent App</h1>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
+          
+          <CardList robots={robots}/>
           
         
       </div>
