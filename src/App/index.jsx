@@ -8,7 +8,7 @@ import CardList from '../App/CardList';
 export class App extends Component {
 
     state = {
-        robots:robots,
+        robots:[],
         searchField:''
     }
 
@@ -20,6 +20,12 @@ export class App extends Component {
     }
  
   render() {
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(user => this.setState({
+ robots:user
+  }))
 
     const filterRobots = this.state.robots.filter(robot => {
         return robot.name.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase())
